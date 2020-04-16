@@ -2,9 +2,10 @@ import React from "react";
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import pet, { _breeds, _dogs, ANIMALS } from "@frontendmasters/pet";
 import SearchParams from "../SearchParams";
+import "regenerator-runtime/runtime";
 
 afterEach(cleanup);
-
+// read https://jestjs.io/docs/en/tutorial-react
 test("SearchParams", async () => {
   const { container, getByTestId, getByText } = render(<SearchParams />);
 
